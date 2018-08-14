@@ -4,6 +4,7 @@ import { Icon, FormLabel, FormInput } from "react-native-elements";
 import { connect } from "react-redux";
 import axios from "axios";
 import { login } from "../store/userReducer";
+import { NavigationActions } from "react-navigation";
 
 class LoginForm extends React.Component {
   constructor() {
@@ -19,6 +20,10 @@ class LoginForm extends React.Component {
     try {
       event.preventDefault();
       this.props.handleLogin(formData);
+      this.setState({
+        email: "",
+        password: ""
+      });
       this.props.navigation.navigate("CameraView");
       // set user info to redux store
     } catch (error) {

@@ -55,6 +55,7 @@
     "react-native-google-places": "^2.5.2",
     "react-native-image-picker": "^0.26.10",
     "react-native-material-menu": "^0.4.0",
+    "react-native-swipe-gestures": "^1.0.2",
     "react-native-view-shot": "^2.4.0",
     "react-navigation": "^2.7.0",
     "react-redux": "^5.0.7",
