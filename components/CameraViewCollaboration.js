@@ -233,11 +233,29 @@ export default class CameraViewCollaboration extends Component {
     }
   }
 
-  findShape(sizeToUse, shape) {
-    if (shape === 'sphere') {
+  findShape(sizeToUse) {
+    if (this.state.shape === 'sphere') {
       return new THREE.SphereGeometry(sizeToUse, 32, 32);
-    } else if (shape === 'pyramid') {
+    } else if (this.state.shape === 'pyramid') {
       return new THREE.TetrahedronBufferGeometry(sizeToUse, 0);
+    } else if (this.state.shape === 'icosahedron') {
+      return new THREE.IcosahedronGeometry(sizeToUse, 0);
+    } else if (this.state.shape === 'octahedron') {
+      return new THREE.OctahedronGeometry(sizeToUse, 0);
+    } else if (this.state.shape === 'ring') {
+      return new THREE.TorusGeometry(
+        sizeToUse,
+        sizeToUse / 4,
+        sizeToUse / 2,
+        100
+      );
+    } else if (this.state.shape === 'knot') {
+      return new THREE.TorusKnotBufferGeometry(
+        sizeToUse,
+        sizeToUse / 3,
+        100,
+        sizeToUse * 8
+      );
     } else {
       return new THREE.BoxGeometry(sizeToUse, sizeToUse, sizeToUse);
     }
@@ -492,6 +510,15 @@ export default class CameraViewCollaboration extends Component {
               </MenuItem>
               <MenuItem onPress={() => this.setState({ shape: 'pyramid' })}>
                 Pyramid
+              </MenuItem>
+              <MenuItem onPress={() => this.setState({ shape: 'icosahedron' })}>
+                Icosahedron
+              </MenuItem>
+              <MenuItem onPress={() => this.setState({ shape: 'octahedron' })}>
+                Octahedron
+              </MenuItem>
+              <MenuItem onPress={() => this.setState({ shape: 'ring' })}>
+                Ring
               </MenuItem>
             </Menu>
           </View>
