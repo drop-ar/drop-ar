@@ -72,4 +72,4 @@ const width = gl.drawingBufferWidth;
       gl.endFrameEXP();
     };
     animate();
-  };
+ 
