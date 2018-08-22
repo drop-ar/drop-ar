@@ -11,14 +11,14 @@ const DISLIKE_ART = 'DISLIKE_ART';
 const GET_LIKES = 'GET_LIKES';
 const CHANGE_LIKED = 'CHANGE_LIKED'
 
-export const likeArt = likeArt => ({
+export const likeArt = likedArt => ({
   type: LIKE_ART,
-  likeArt,
+  likedArt,
 });
 
-export const dislikeArt = dislikeArt => ({
+export const dislikeArt = dislikedArt => ({
   type: DISLIKE_ART,
-  dislikeArt,
+  dislikedArt,
 });
 
 export const getLikes = likes => ({
@@ -63,12 +63,12 @@ const likesReducer = (likesState = initialState, action) => {
     case DISLIKE_ART:
       return {
         ...likesState,
-        likeArt: action.likeArt,
+        likeArt: action.dislikedArt,
       };
     case LIKE_ART:
       return {
         ...likesState,
-        likeArt: action.likeArt,
+        likeArt: action.likedArt,
       };
     case GET_LIKES:
       return {

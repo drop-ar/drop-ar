@@ -108,7 +108,6 @@ describe('User routes', () => {
         .send(updateUser)
         .expect(200)
 
-        console.log(res.body)
         expect(res.body.firstName).to.be.equal("fake")
         expect(res.body.lastName).to.be.equal("artist")
         expect(res.body.email).to.be.equal("email")

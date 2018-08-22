@@ -17,7 +17,7 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest",
+    "test": "node_modules/.bin/jest",
     "test-mocha": "NODE_ENV='test' mocha \"./server/**/*.spec.js\" \"./database/**/*.spec.js\" \"./utilities/*.spec.js\" ",
     "seed": "node database/seed.js",
     "start-watch": "nodemon server/index.js --watch server --watch database --watch package.json",

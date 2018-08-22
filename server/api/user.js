@@ -13,7 +13,6 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:email', async (req, res, next) => {
   try{
-    console.log('PARAMS', req.params.email)
     const userExists = await User.findAll({where: {
       email: req.params.email
     }})
