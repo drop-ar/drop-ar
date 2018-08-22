@@ -8,7 +8,6 @@ describe('Action creators for likes reducer', () => {
       type: 'LIKE_ART',
       likedArt
     }
-
     expect(likeArt(likedArt)).toEqual(expectedAction)
   })
 
@@ -18,7 +17,6 @@ describe('Action creators for likes reducer', () => {
       type: 'DISLIKE_ART',
       dislikedArt
     }
-
     expect(dislikeArt(dislikedArt)).toEqual(expectedAction)
   })
 
@@ -28,11 +26,6 @@ describe('Action creators for likes reducer', () => {
       type: 'GET_LIKES',
       likes
     }
-
     expect(getLikes(likes)).toEqual(expectedAction)
   })
-
-  
-
-
 })

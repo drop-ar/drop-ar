@@ -3,7 +3,6 @@ import {getAllArt, getSingleArt, saveSingleArt, editSingleArt, getUserArt}  from
 
 
 describe('Action creators Art Reducer', () => {
-  
   it('should create an action to get all art', () => {
     const allArt = []
     const expectedAction = {
@@ -28,7 +27,6 @@ describe('Action creators Art Reducer', () => {
       type: 'SAVE_SINGLE_ART',
       singleArt
     }
-
     expect(saveSingleArt(singleArt)).toEqual(expectedAction)
   })
 
@@ -38,7 +36,6 @@ describe('Action creators Art Reducer', () => {
       type: 'GET_USER_ART',
       userArt
     }
-
     expect(getUserArt(userArt)).toEqual(expectedAction)
   })
 
@@ -48,7 +45,6 @@ describe('Action creators Art Reducer', () => {
       type: 'EDIT_SINGLE_ART',
       singleArt
     }
-
     expect(editSingleArt(singleArt)).toEqual(expectedAction)
   })
 })

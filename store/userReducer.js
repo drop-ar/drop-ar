@@ -10,12 +10,12 @@ const SIGN_UP_WITHOUT_GOOGLE = "SIGN_UP_WITHOUT_GOOGLE";
 const SET_USER = "SET_USER"
 const UPDATE_USER = 'UPDATE_USER'
 
-const loginWithoutGoogle = user => ({
+export const loginWithoutGoogle = user => ({
   type: LOGIN_ME,
   user: user
 });
 
-const signUpWithoutGoogle = user => ({
+export const signUpWithoutGoogle = user => ({
   type: SIGN_UP_WITHOUT_GOOGLE,
   user: user
 });
@@ -25,7 +25,7 @@ export const setCurrentUser = user => ({
   user: user
 })
 
-const updateUser = user => ({
+export const updateUser = user => ({
   type: UPDATE_USER,
   user: user
 });
